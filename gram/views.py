@@ -11,4 +11,8 @@ def Index(request):
     posts = Post.get_posts()
     comments = Comment.get_comments()
 
-    
+    if request.method == 'POST':
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            comment = form.save(commit=False)
+            
