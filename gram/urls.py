@@ -14,5 +14,3 @@ urlpatterns = [
     re_path(r'^updateprofile/', views.update_profile, name='update_profile'),
 ]
 
-if settings.DEBUG:
-    urlpatterns+= static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
