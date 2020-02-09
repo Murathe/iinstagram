@@ -21,4 +21,11 @@ class Image(models.Model):
 class Profile(models.Model):
     profile_image = models.ImageField(upload_to='images/', height_field=None, width_field=None, max_length=None)
     bio = models.TextField(max_length=100)
-    
+
+    @classmethod
+    def save_profile(self):
+        self.save()
+
+    def delete_profile(self):
+        self.delete()
+        
