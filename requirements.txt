@@ -43,7 +43,6 @@ psycopg2-binary==2.8.2
 pycairo==1.16.2
 pycparser==2.19
 pycrypto==2.6.1
-pygobject==3.26.1
 python-dateutil==2.8.1
 python-editor==1.0.4
 pytz==2019.3
