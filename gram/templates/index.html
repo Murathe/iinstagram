@@ -8,11 +8,11 @@
             <div class="col-sm-3"></div><!--empty-->
             <div class="col-sm-6">
                 {% for post in posts%}
-                    <div class="card" style="margin-top:5%;margin-bottom:1%;">
+                    <div class="card" style="margin-top:5%;margin-bottom:2%;">
                         <div class="card-header">
                             {% if post.user.profile.profile_photo%}
                                 <a><img class="rounded-circle" src="{{post.user.profile.profile_photo.url}}"
-                                        style="height:70px;width: 70px;" alt="No profile pic">
+                                        style="height:80px;width: 80px;" alt="My profile image">
                                     <strong style="font-size:19px;">{{post.user.username | title}}</strong>
                                 </a>
                             {% else%}
@@ -22,13 +22,13 @@
                             {% endif%}
                         </div>
                         <div class="card-body text-center">
-                            <img class="img-fluid" src="{{post.post_image.url}}" style="height: 400px; width: 500px;"
-                                type="button" class="btn btn-sm btn-outline-primary" id="post{{post.id}}"
+                            <img class="img-fluid" src="{{post.post_image.url}}" style="height: 300px; width: 400px;"
+                                type="button" class="btn btn-sm btn-outline-success" id="post{{post.id}}"
                                 data-whatever="{{post.id}}" data-toggle="modal" data-target="#extraModal{{post.id}}">
                         </div>
                         <div class="card-footer bg-white">
                             <p><strong>{{post.user.username}}</strong> {{post.caption}}</p>
-                            <p style="font-size: 20px;color:gray;">{{post.pub_date | naturaltime}}</p>
+                            <p style="font-size: 20px;color:green;">{{post.pub_date | naturaltime}}</p>
                             <strong>Comments:</strong>
                             {% for comment in comments %}
                                 {% if post.id == comment.post.id%}
@@ -56,9 +56,9 @@
                 <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
                     <div class="modal-content ">
                         <div class="modal-body row" style="padding:0;">
-                            <img style="height: 500px;padding:0;margin: 0;" id="image" class=" col-12 col-md-7 text-center"
+                            <img style="height: 500px;padding:0;margin: 0;" id="image" class=" col-sm-12 col-md-7 text-center"
                                 src='{{post.post_image.url}}'>
-                            <div class=" col-12 col-md-5 card">
+                            <div class=" col-sm-12 col-md-5 card">
                                 <div class="card-header bg-white">
                                     <p><span>Posted by:
                                         </span><strong>{{post.user.username| title}}</strong></p>
@@ -69,7 +69,7 @@
                                     {% for comment in comments %}
                                     {% if post.id == comment.post.id%}
                                     <p><strong>{{comment.user.username}}</strong> {{comment.comment | title}} <span
-                                            style="font-size: 10px;color:gray;">{{comment.pub_date | naturaltime}}</span></p>
+                                            style="font-size: 10px;color:green;">{{comment.pub_date | naturaltime}}</span></p>
                                     {% endif%}
                                     {% endfor %}
                                 </div>

@@ -33,12 +33,10 @@ def signup(request):
             email = form.cleaned_data.get('email')
             name = form.cleaned_data.get('username')
             send_mail(
-            'Welcome to insta app.',
-            f'Hello {name},\n '
-            'Welcome to insta app, where you can share your photos with the world.',
-            'johngichuhi769@gmail.com',
-            [email],
-            fail_silently=False,
+                'Welcome to gram.', f'Hello {name},\n '
+                'Welcome to gram app, share your photos with the people.', 'murathe@gmail.com',
+                [email],
+                fail_silently=False,
             )
         return redirect('home')
     else:

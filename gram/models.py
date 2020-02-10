@@ -34,7 +34,7 @@ class Comment(models.Model):
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE,)
-    profile_photo = models.ImageField(upload_to = 'posts/')
+    profile_photo = models.ImageField(upload_to = 'media/')
     bio = models.TextField(max_length=255)
 
     def save_profile(self):
