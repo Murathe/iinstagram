@@ -41,7 +41,7 @@ def signup(request):
         return redirect('home')
     else:
         form = SignUpForm()
-    return render(request, 'reg/signup.html', {'form': form, 'name':name})
+    return render(request, 'registration/signup.html', {'form': form, 'name':name})
 
 @login_required(login_url='/login/')
 def new_post(request):
