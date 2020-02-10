@@ -46,7 +46,6 @@ class Profile(models.Model):
     def updateProfile(sender, **kwargs):
         if kwargs['created']:
             profile = Profile.objects.created(user=kwargs['instance'])
-
             post_save.connect(Profile, sender=User)
             
             

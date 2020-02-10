@@ -20,8 +20,6 @@ def index(request):
             return redirect('home')
     else:
         form = CommentForm()
-    
-   
     return render(request, 'index.html', {'current_user':current_user, 'posts':posts, 'form':form, 'comments':comments})
 
 def signup(request):
@@ -78,9 +76,7 @@ def update_profile(request):
 
 def profile(request):
     current_user = request.user
-
     posts = Post.get_posts()
     comments = Comment.get_comments()
-    
     return render(request, 'profile.html', {'current_user':current_user, 'posts':posts, 'comments':comments})
     

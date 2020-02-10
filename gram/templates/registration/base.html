@@ -2,17 +2,16 @@
 {% load static%}
 
 {% block content %}
-<div class="container-fluid">
+<div class="container" style="margin-top: 10%;">
   <div class="row">
-    <div class="col-md-2"><!-- Empty div -->
+    <div class=""><!-- Empty div -->
     </div>
-    <div class="col-md-3" style="text-align: right;">
-      <img src="{{request.scheme}}://{{request.META.HTTP_HOST}}{% static 'images/phon.jpg' %}" class="img-fluid image" style="margin-top:13%;height: 90%;">
+    <div class="col-md-5" style="">
+      <img src="{{request.scheme}}://{{request.META.HTTP_HOST}}{% static 'images/land.png' %}" class="image img-responsive" style="">
     </div>
     <div class="col-md-5">
-      <div class="card" style="margin-top:7%;padding-left: 10%;border-radius:3%;">
+      <div class="card" style="">
         <div class="card-heading text-center">
-          <img src="{{request.scheme}}://{{request.META.HTTP_HOST}}{% static 'images/logo.jpg' %}" class="img-fluid" style="height:30%;width:30%">
           {% if name%}
             <strong><p class="text-secondary" style="font-size:17px;">{{name}} to see photos and videos from your friends.</p></strong>
           {% else%}
