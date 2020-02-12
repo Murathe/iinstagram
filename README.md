@@ -4,6 +4,7 @@
 ### Author
 Murathe Isaac
 
+![image](https://user-images.githubusercontent.com/29546502/74370737-a7220f00-4de8-11ea-9400-0a3884fca4ff.png)
 
 ### Requirements
 ##### These are the requirements you need to get the project running locally on your machine:
@@ -42,6 +43,7 @@ Murathe Isaac
 #### For more information read the following django and python documentation:
   - [DjangoDocumentation](https://docs.djangoproject.com/en/1.11/intro/install/)
   - [PythonDocumentation](https://www.python.org/doc/)
+
 
 
 ### User Stories
