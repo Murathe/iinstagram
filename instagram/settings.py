@@ -25,7 +25,7 @@ SECRET_KEY = 'b5%aww%y)@@5+-h^bed$vjpu5m9t*)bm#5h@@*#puc-t2iypc7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['inztagram.herokuapp.com']
 
 
 # Application definition
