@@ -1,0 +1,27 @@
+{% load bootstrap3 %}
+{% load static%}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  {% if title %}
+    <title>Instagram</title>
+  {% else %}
+    <title> Instagram </title>
+  {% endif %}
+  {% block styles %}
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.0/css/mdb.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+  {% endblock %}
+</head>
+<body style="background-image: linear-gradient(to right top, #051937, #24214e, #49235f, #721f67, #9b1065); height: 100vh;">
+  {% include 'navbar.html' %}
+  {% block content %}
+  <!--to be replaced-->
+  {% endblock%}
+</body>
+</html>
